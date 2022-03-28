@@ -1,0 +1,16 @@
+<%-include("./partials/head.ejs") %>
+
+<% if(typeof post !== 'undefined' && post !== null) { %>
+    <section id="editPost" class="create-form">
+        <form action="/edit-post" method="post">
+            <input type="hidden" name="id" value="<%=post._id%>">
+            <input type="text" placeholder="title" name="title" value="<%=post.title%>">
+            <textarea name="post" id=""><%=post.content%></textarea>
+            <button type="submit">Confirm Edit</button>
+        </form>
+    </section>
+<% } else { %>
+    <h1>404 - Something's wrong in the neighborhood!</h1>
+<% } %>
+
+<%-include("./partials/footer.ejs") %>

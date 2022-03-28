@@ -1,0 +1,10 @@
+<%-include('./partials/head.ejs') %>
+
+<form action="/sign-up" method="post" class="create-form">
+    <input type="text" name="name" id="name" placeholder="your name">
+    <input type="date" name="birthdate" id="birthdate">
+    <textarea name="bio" id="bio" placeholder="type your bio here.."></textarea>
+    <button type="submit">Sign up!</button>
+</form>
+
+<%-include('./partials/footer.ejs') %>

@@ -1,0 +1,11 @@
+<%-include("./partials/head.ejs") %>
+
+<section id="createPost" class="create-form">
+    <form action="/create-post" method="post">
+        <input type="text" placeholder="title" name="title" >
+        <textarea name="post" id=""></textarea>
+        <button type="submit">Add-Post</button>
+    </form>
+</section>
+
+<%-include("./partials/footer.ejs") %>

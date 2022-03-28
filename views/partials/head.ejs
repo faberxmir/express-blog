@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <% if(typeof cssList !== 'undefined'){ %>
+        <% cssList.forEach(cssFile => { %>
+            <link rel="stylesheet" href="/<%=cssFile%>"">
+        <% }); %>
+    <%}%>
+    <title>
+        <% if(typeof pageTitle !== 'undefined'){ %>
+            <%=pageTitle%>
+        <%} else{ %>
+            geirhilmersen.com
+        <% } %>
+    </title>
+</head>
+<body>
+    <nav id="main-nav">
+        <h1>GeirHilmersen.com</h1>
+        <ul id="nav-links">
+            <li><a href="/show-posts">Show posts</a></li>
+            <!--If user is logged in, show menu as logged in, else show as logged out-->
+            <% if( typeof user !== 'undefined' && user !== null) { %>
+                <% console.log('hei!', user.name) %>
+                <li><a href="/create-post">Create Post</a></li>
+                <li><a href="/sign-out">Sign Out</a></li>
+            <% } else { %>
+                <li><a href="/sign-up">Create Profile</a></li>
+                <li><a href="/sign-in">Log in</a></li>
+            <% } %>
+        </ul>
+    </nav>

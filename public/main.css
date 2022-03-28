@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+:root{
+    --Paradise-Pink:  #EE4266;
+    --St-Patricks-Blue: #32236C;
+    --Rich-Black: #0A0F0D;
+    --Silver-Sand: #c4c6cb;
+    --Tiffany-Blue: #3CBBB1; 
+}
+
+html {
+    background-color: var(--Silver-Sand);
+    font-family: 'Maven Pro';
+    min-width: 100ch;
+}
+
+
+footer {
+    color: var(--Paradise-Pink);
+    margin: 0 auto;
+    width: fit-content;
+}
+
+nav {
+    border-color: var(--St-Patricks-Blue);
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    color: var(--Paradise-Pink);
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+
+nav h1 {
+    color: inherit;
+    display: inline;
+}
+
+nav ul {
+    display: inline;
+    float: right;
+    margin: 0 2em 0 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1.2em;
+}
+nav ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post {
+    background-color: white;
+    color: var(--St-Patricks-Blue);
+    margin: 0.5em auto;
+    padding: 1em 2em;
+    width: 75ch;
+}
+
+.post form {
+    display: inline-block;
+    width: fit-content;
+}
+.post form button {
+    margin-right: 1em;
+}
+
+button {
+    background-color: var(--St-Patricks-Blue);
+    border: solid 2px var(--St-Patricks-Blue);
+    border-radius: 1ch;
+    color: var(--Paradise-Pink);
+    font-size: inherit;
+    height: 3em;
+    margin-top: 1em;
+}
+
+button:hover {
+    border: solid 2px var(--Paradise-Pink);
+}
+
+button:active {
+    background-color: var(--Tiffany-Blue);
+}

@@ -1,0 +1,14 @@
+<%- include('./partials/head.ejs') %>
+
+<% if(typeof post !== 'undefined' && post !== null) { %>
+    <form class="delete-form" action="/delete-post" method="post">
+        <input type="hidden" name="id" id="" value="<%=post.id%>">
+        <h1><%= post.title %></h1>
+        <p><%= post.creationDate %></p>
+        <hr>
+        <p><%= post.content %></p>
+        <button type="submit">Confirm Delete</button>
+    </form>
+<% } %>
+
+<%- include('./partials/footer.ejs') %>
